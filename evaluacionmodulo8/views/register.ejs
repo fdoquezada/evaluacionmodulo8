@@ -1,0 +1,50 @@
+<%-include("./partials/head")%>
+<!-- cargas de css -->
+<link rel="stylesheet" href="css/autenticacion.css">
+<%-include("./partials/closeHead")%>
+
+<!-- HTML -->
+<div class="alert alert-danger esconderError w-75 m-auto mt-3  " role="alert" id="msjError">
+  mensaje
+</div>
+
+<main class=" w-100 m-auto contenedor formularioSesion mt-5">
+    <form action="/register" method="post">
+      <img class="mb-4 logo" src="img/logo.png" alt="">
+      <h1 class="h3 mb-3 fw-normal">Registro</h1>
+  
+      <div class="form-floating">
+        <input type="email" class="form-control mb-3" id="floatingInput" name="email" placeholder="name@example.com">
+        <label for="floatingInput">Email</label>
+      </div>
+         <!-- ----------------NUEVO---------------- -->
+      <div class="form-floating">
+        <input type="text" class="form-control mb-3" id="username" name="username" placeholder="neo">
+        <label for="floatingInput">Username</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control mb-3" id="nombre" name="nombre" placeholder="Thomas Andersson">
+        <label for="floatingInput">Nombre</label>
+      </div>
+      <!-- ------------------------------------ -->
+      <div class="form-floating">
+        <input type="password" class="form-control mb-2" id="floatingPassword" name="password" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+      </div>
+         <!-- ----------------NUEVO---------------- -->
+      <div class="form-floating">
+        <input type="password" class="form-control mb-2" id="floatingPassword2" name="password2" placeholder="Password">
+        <label for="floatingPassword">Confirmar Password</label>
+      </div>
+        <!-- ------------------------------------ -->
+      <p class="esconderError textoError" id="errormsg">password no coincide</p>
+      
+      <button class="w-100 btn btn-lg btn-success mb-3" type="submit">Registrarse</button>
+      
+      <p class="mt-5 mb-3 text-muted">© by XP =)</p>
+    </form>
+  </main>
+
+<!-- cargas de js -->
+<script src="js/registro.js"></script>
+<%-include("./partials/foot")%>
