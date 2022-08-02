@@ -8,6 +8,6 @@ const router=express.Router();
 
 
 //asingar la ruta
-router.get("/",verificarSesionCookie,getHome);
+router.get("/",getHome);
 
 module.exports=router

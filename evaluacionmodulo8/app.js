@@ -3,10 +3,12 @@ const express = require('express')
 const router=require("./routes");
 const bodyparser=require("body-parser");
 const cookieParser=require("cookie-parser");
+const morgan = require("morgan");
 
 //configuracion
 const app = express();
 //carpeta de archivos estáticos
+app.use(morgan("dev"));
 app.use(express.static("public"));
 //motor de vistas ejs
 app.set("view engine","ejs");
